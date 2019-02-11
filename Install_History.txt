@@ -1,0 +1,93 @@
+https://www.techomoro.com/how-to-install-and-setup-react-native-on-ubuntu-17-10/
+
+
+node -v
+  352  npm -v
+  353  sudo apt install openjdk-8-jre openjdk-8-jdk
+
+
+mkdir react-native
+  362  cd react-native/
+  363  npm install -g react-native-cli
+  364  npm i npm
+  365  sudo npm install -g react-native-cli
+  366  ls
+  367  react-native init react_sample
+
+
+
+https://code.likeagirl.io/say-hello-world-using-react-native-in-linux-15955986bc44
+
+
+
+sudo apt install adb
+
+adb devices
+
+
+hari@systemx:~/hari/react-native/react_sample$ adb devices
+List of devices attached
+* daemon not running; starting now at tcp:5037
+* daemon started successfully
+ZY322FNM2D	unauthorized
+
+
+https://facebook.github.io/react-native/docs/getting-started.html
+https://facebook.github.io/react-native/docs/getting-started#java-development-kit
+https://facebook.github.io/react-native/docs/running-on-device
+
+
+To run your app on iOS:
+   cd /home/hari/hari/react-native/react_sample
+   react-native run-ios
+   - or -
+   Open ios/react_sample.xcodeproj in Xcode
+   Hit the Run button
+To run your app on Android:
+   cd /home/hari/hari/react-native/react_sample
+   Have an Android emulator running (quickest way to get started), or a device connected
+   react-native run-android
+
+
+
+  373  ls
+  374  react-native run-android
+  375  cd
+  376  sudo nano $HOME/.bash_profile
+  377  cat .bash_history 
+  378  sudo nano $HOME/.bash_profile
+  379  cat .bash_profile 
+
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+
+
+  380  source $HOME/.bash_profile
+  381  echo $PATH
+  382  adb devices
+  383  cd /home/hari/hari/react-native/react_sample
+  384  react-native run-android
+  385  adb devices
+  386  cd ../
+  387  react-native init AwesomeProject
+  388  cd /home/hari/hari/react-native/AwesomeProject
+  389  react-native run-android
+
+
+source $HOME/.bash_profile && echo $PATH
+
+
+
+cd /home/hari/hari/react-native/react_sample && npm start
+
+git clone https://github.com/facebook/watchman.git
+cd watchman
+git checkout v4.9.0  # the latest stable release
+./autogen.sh
+./configure
+make
+sudo make install
